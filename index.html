@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ciotti Enterprises — East Syracuse, NY (Preview)</title>
+<meta name="description" content="Family-owned roll-off dumpsters, hauling, demolition, and commercial snow removal in Central New York since 1994.">
+<style>
+:root{
+  --ink:#0f1720;--muted:#5b6672;--line:#d7dde5;--bg:#f4f6f8;--card:#fff;
+  --brand:#1a4d7c;--brand2:#0e3558;--accent:#e8a317;--ok:#1f7a4c;
+  --shadow:0 10px 30px rgba(15,23,32,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{width:min(1080px,calc(100% - 32px));margin:0 auto}
+.banner{background:#fff8e6;color:#7a5a00;font-size:.8rem;text-align:center;padding:8px 12px;border-bottom:1px solid #f0d48a}
+header{position:sticky;top:0;z-index:20;background:rgba(14,53,88,.97);color:#fff;backdrop-filter:blur(8px)}
+header .row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px}
+.logo{font-weight:800;letter-spacing:.02em;line-height:1.1}
+.logo small{display:block;font-weight:500;opacity:.75;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase}
+.nav{display:none;gap:18px;font-size:.92rem}
+@media(min-width:820px){.nav{display:flex}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 18px;font-weight:700;font-size:.95rem;cursor:pointer}
+.btn-accent{background:var(--accent);color:#1a1400}
+.btn-white{background:#fff;color:var(--brand2)}
+.btn-outline{background:transparent;border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn-brand{background:var(--brand);color:#fff}
+.btn-call{background:#16a34a;color:#fff}
+.hero{background:linear-gradient(145deg,#0e3558 0%,#1a4d7c 55%,#2563a8 100%);color:#fff;padding:42px 0 36px}
+.hero h1{font-size:clamp(1.9rem,6vw,3.1rem);line-height:1.08;margin:10px 0 12px;letter-spacing:-.02em}
+.hero p{max-width:540px;opacity:.92;font-size:1.05rem}
+.eyebrow{display:inline-block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:22px;font-size:.9rem;opacity:.95}
+.chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 12px}
+section{padding:48px 0}
+h2{font-size:clamp(1.45rem,3.5vw,1.9rem);letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:22px;max-width:620px}
+.grid{display:grid;gap:14px}
+@media(min-width:720px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:1.1fr .9fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+.size{text-align:center;transition:transform .15s ease,border-color .15s}
+.size:hover,.size.active{transform:translateY(-2px);border-color:var(--brand)}
+.size .yd{font-size:2rem;font-weight:800;color:var(--brand);line-height:1}
+.size .label{font-size:.85rem;color:var(--muted);margin-top:4px}
+.size .use{margin-top:10px;font-size:.92rem}
+.form{display:grid;gap:10px}
+label{font-size:.82rem;font-weight:650;color:var(--muted)}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}
+textarea{min-height:90px;resize:vertical}
+.note{font-size:.8rem;color:var(--muted)}
+.ok{display:none;background:#ecfdf3;color:#166534;border:1px solid #bbf7d0;border-radius:12px;padding:12px 14px;font-size:.92rem}
+.services{background:#eef3f8}
+.svc h3{font-size:1.1rem;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:.95rem}
+.badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:#e8f5ee;color:var(--ok);border-radius:999px;padding:4px 9px;margin-bottom:10px}
+.team{display:grid;gap:14px}
+@media(min-width:720px){.team{grid-template-columns:1fr 1fr}}
+.person{display:flex;gap:14px;align-items:flex-start}
+.avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(145deg,#1a4d7c,#6b93b8);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex:0 0 auto}
+.sticky-call{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:flex;gap:8px}
+@media(min-width:820px){.sticky-call{display:none}}
+.sticky-call a{flex:1;box-shadow:0 12px 28px rgba(0,0,0,.25)}
+footer{background:var(--brand2);color:#c9d6e4;padding:28px 0 110px;font-size:.88rem}
+@media(min-width:820px){footer{padding-bottom:28px}}
+footer strong{color:#fff}
+.footer-grid{display:grid;gap:16px}
+@media(min-width:720px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="banner">Preview concept for Ciotti Enterprises — not live yet. Phone and email below are your real contacts.</div>
+<header>
+  <div class="wrap row">
+    <div class="logo">Ciotti Enterprises<small>East Syracuse · Since 1994</small></div>
+    <nav class="nav">
+      <a href="#dumpsters">Dumpsters</a>
+      <a href="#snow">Snow</a>
+      <a href="#about">About</a>
+      <a href="#book">Book</a>
+    </nav>
+    <a class="btn btn-call" href="tel:3154634416">Call 315-463-4416</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Roll-off · Hauling · Demolition · Snow</div>
+    <h1>Dumpsters and snow crews that show up when Central New York needs them.</h1>
+    <p>Family owned since 1994. Same-day roll-offs in most cases, commercial snow that keeps sites moving, and a fleet we own so you are not waiting on someone else's truck.</p>
+    <div class="ctas">
+      <a class="btn btn-accent" href="#book">Book a dumpster</a>
+      <a class="btn btn-white" href="tel:3154634416">Tap to call</a>
+      <a class="btn btn-outline" href="#snow">Snow removal</a>
+    </div>
+    <div class="trust">
+      <span class="chip">Since 1994</span>
+      <span class="chip">Family owned</span>
+      <span class="chip">Same-day fleet</span>
+      <span class="chip">Syracuse Airport snow work</span>
+    </div>
+  </div>
+</section>
+
+<section id="dumpsters">
+  <div class="wrap">
+    <h2>Pick a dumpster size</h2>
+    <p class="sub">15, 20, and 30 yard open tops for cleanouts, reno debris, and job sites. Larger or enclosed units available on request.</p>
+    <div class="grid g3" id="sizes">
+      <button type="button" class="card size active" data-size="15" aria-pressed="true">
+        <div class="yd">15</div>
+        <div class="label">yard</div>
+        <p class="use">Garage / basement cleanouts, small reno</p>
+      </button>
+      <button type="button" class="card size" data-size="20" aria-pressed="false">
+        <div class="yd">20</div>
+        <div class="label">yard</div>
+        <p class="use">Roofing, kitchen/bath gut jobs</p>
+      </button>
+      <button type="button" class="card size" data-size="30" aria-pressed="false">
+        <div class="yd">30</div>
+        <div class="label">yard</div>
+        <p class="use">New construction, larger demos</p>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section id="book" style="padding-top:0">
+  <div class="wrap grid g2">
+    <div class="card">
+      <h2>Request a drop-off</h2>
+      <p class="sub" style="margin-bottom:14px">Tell us the size and address. We will call you back to confirm timing. Prefer the phone? <a href="tel:3154634416" style="color:var(--brand);font-weight:700">315-463-4416</a></p>
+      <form class="form" id="book-form">
+        <div>
+          <label for="size">Dumpster size</label>
+          <select id="size" name="size">
+            <option value="15">15 yard</option>
+            <option value="20">20 yard</option>
+            <option value="30">30 yard</option>
+            <option value="other">Larger / enclosed</option>
+          </select>
+        </div>
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" required placeholder="Your name">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Best number">
+        </div>
+        <div>
+          <label for="addr">Drop-off address</label>
+          <input id="addr" name="addr" autocomplete="street-address" required placeholder="Street, city">
+        </div>
+        <div>
+          <label for="notes">What are you tossing?</label>
+          <textarea id="notes" name="notes" placeholder="Cleanout, roofing, demo, etc."></textarea>
+        </div>
+        <button class="btn btn-brand" type="submit">Send request</button>
+        <p class="note">Preview only: this form does not email yet. On the live site it would go straight to the Ciotti desk.</p>
+        <div class="ok" id="ok">Got it. On the live site this would ping the office. For now, call or text 315-463-4416.</div>
+      </form>
+    </div>
+    <div class="card" style="background:linear-gradient(160deg,#0e3558,#1a4d7c);color:#fff;border:0">
+      <div class="badge" style="background:rgba(232,163,23,.2);color:var(--accent)">Why this layout</div>
+      <h2 style="color:#fff">Built for the phone in someone's hand on a job site.</h2>
+      <p style="opacity:.9;margin:10px 0 18px">Big tap-to-call. Clear sizes. Snow not buried in a bio. Your real number and email stay front and center.</p>
+      <p><strong>315-463-4416</strong><br>mike@ciottienterprises.com<br>6533 Badgley Rd, East Syracuse NY 13057</p>
+      <p style="margin-top:14px;opacity:.85;font-size:.92rem">Hours: Mon–Fri 6am–5pm · Emergency noted 24/7</p>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="snow">
+  <div class="wrap">
+    <h2>Commercial snow removal</h2>
+    <p class="sub">Seasonal contracts for lots, docks, and access roads. Pete and the crew have kept Syracuse Airport moving through harsh winters.</p>
+    <div class="grid g3">
+      <div class="card svc">
+        <div class="badge">Seasonal</div>
+        <h3>Plow + treat</h3>
+        <p>Route-based commercial sites so your people can get in before the first shift.</p>
+      </div>
+      <div class="card svc">
+        <div class="badge">Hauling</div>
+        <h3>Waste &amp; aggregate</h3>
+        <p>Construction debris, MSW, and landscape loads for residential and commercial jobs.</p>
+      </div>
+      <div class="card svc">
+        <div class="badge">Heavy</div>
+        <h3>Demolition support</h3>
+        <p>Containers and trucks for tear-outs when the schedule will not wait.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Family owned since 1994</h2>
+    <p class="sub">Ciotti Enterprises is still Pete and Michael on the work, not a call center reading a script.</p>
+    <div class="team">
+      <div class="card person">
+        <div class="avatar">PC</div>
+        <div>
+          <strong>Peter J. Ciotti</strong>
+          <div class="note">President / Owner</div>
+          <p style="margin-top:8px;color:var(--muted)">Often in a piece of equipment beside the crew. Snow and hauling are the passion, not just the letterhead.</p>
+        </div>
+      </div>
+      <div class="card person">
+        <div class="avatar">MC</div>
+        <div>
+          <strong>Michael C. Ciotti</strong>
+          <div class="note">Director of Operations</div>
+          <p style="margin-top:8px;color:var(--muted)">Day-to-day ops, safety, fleet, and customer service. Hands-on when a job needs another truck.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <strong>Ciotti Enterprises, Inc.</strong>
+      <p style="margin-top:8px">6533 Badgley Rd<br>East Syracuse NY 13057</p>
+    </div>
+    <div>
+      <strong>Call / email</strong>
+      <p style="margin-top:8px"><a href="tel:3154634416">315-463-4416</a><br><a href="mailto:mike@ciottienterprises.com">mike@ciottienterprises.com</a></p>
+    </div>
+    <div>
+      <strong>Preview note</strong>
+      <p style="margin-top:8px">Concept layout for review. Photos and final copy can swap in before go-live.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a class="btn btn-call" href="tel:3154634416">Call now</a>
+  <a class="btn btn-accent" href="#book">Book dumpster</a>
+</div>
+
+<script>
+(function(){
+  var sizes=document.querySelectorAll('#sizes .size');
+  var select=document.getElementById('size');
+  sizes.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      sizes.forEach(function(b){b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+      btn.classList.add('active');btn.setAttribute('aria-pressed','true');
+      if(select) select.value=btn.getAttribute('data-size');
+      document.getElementById('book').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  });
+  var form=document.getElementById('book-form');
+  var ok=document.getElementById('ok');
+  if(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      ok.style.display='block';
+    });
+  }
+})();
+</script>
+</body>
+</html>
